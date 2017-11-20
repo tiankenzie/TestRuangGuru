@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator_layout"
+    tools:context="com.android.ruangguru.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbars"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/background_quiz">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_header"
+                android:paddingTop="@dimen/padding_header"
+                android:paddingBottom="@dimen/padding_header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/quiz_number"
+                    android:text="@string/question_number"/>
+
+                <TextView
+                    android:id="@+id/text_view_quiz_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/quiz_number"
+                    android:text="14"
+                    android:paddingLeft="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/devider"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:paddingBottom="@dimen/padding_header"
+                android:paddingTop="@dimen/padding_header"
+                android:paddingRight="@dimen/padding_header"
+                >
+
+                <TextView
+                    android:id="@+id/text_view_correct_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/correct_number"
+                    android:paddingRight="5dp"
+                    android:text="7"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/correct_number"
+                    android:text="@string/correct_number"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_question"
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_header"
+            android:paddingBottom="@dimen/padding_header"
+            android:paddingLeft="@dimen/padding_content"
+            android:paddingRight="@dimen/padding_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="8sp"
+                    android:textColor="@color/quiz"
+                    android:text="@string/difficulty"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_difficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_quiz_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:lineSpacingExtra="8sp"
+                android:textColor="@color/quiz"
+                />
+
+        </LinearLayout>
+
+        <RecycleView
+            android:id="@+id/recycle_view"
+            android:layout_below="@+id/layout_question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding_content"
+            android:paddingRight="@dimen/padding_content"/>
+
+        <Button
+            android:id="@+id/button_next"
+            style="@style/base_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

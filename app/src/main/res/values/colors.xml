@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9012fe</color>
+    <color name="colorPrimaryDark">#9012fe</color>
+    <color name="colorAccent">#fb4040</color>
+
+    <color name="image_selector_color_dark">#0DFFFFFF</color>
+    <color name="category_text">#FFFFFF</color>
+    <color name="background_quiz">#f4f4f4</color>
+
+    <color name="quiz_number">#9012fe</color>
+    <color name="quiz">#313131</color>
+    <color name="correct_number">#89000000</color>
+    <color name="devider">#28000000</color>
+</resources>
